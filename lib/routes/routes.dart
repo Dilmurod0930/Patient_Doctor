@@ -12,7 +12,7 @@ class MyRoutes {
     switch (settings.name) {
       case "/splash":
         return MaterialPageRoute(builder: (context) => SplashAuth());
-      case "/auth":
+      case "/home":
         return MaterialPageRoute(builder: (context) => HomeAuthPage());
       case "/sing_in":
         return MaterialPageRoute(builder: (context) => LogInPage());

@@ -43,7 +43,7 @@ class HomeAuthPage extends StatelessWidget {
                     child: TextButton(
                       child: const Text("Get Statred"),
                       onPressed: () {
-                        Navigator.pushNamed(context, "sing_in");
+                        Navigator.pushNamed(context, "/sing_up");
                       },
                     ),
                   ),
@@ -58,7 +58,9 @@ class HomeAuthPage extends StatelessWidget {
                   child: Center(
                     child: TextButton(
                       child: const Text("Log In"),
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.pushNamed(context, "/sing_in");
+                      },
                     ),
                   ),
                 )
