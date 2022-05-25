@@ -1,5 +1,3 @@
-import 'dart:js';
-
 import 'package:flutter/material.dart';
 import 'package:med/Screens/auth/splash/splash_auth.dart';
 

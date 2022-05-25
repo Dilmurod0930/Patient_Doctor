@@ -21,6 +21,7 @@ class _SplashAuthState extends State<SplashAuth> {
   @override
   Widget build(BuildContext context) {
     return Container(
+      child: const Center(child: Text("Splash Page", style: TextStyle(fontSize: 33),)),
       
     );
   }

@@ -1,5 +1,3 @@
-import 'dart:convert';
-
 import 'package:flutter/material.dart';
 import 'package:med/core/constants/color_const.dart';
 
@@ -13,9 +11,9 @@ class HomeAuthPage extends StatelessWidget {
         children: [
           Expanded(child: SizedBox(child: Image.asset(""))),
           Column(
-            children: [
-              Expanded(child: Container(child: Text("Your medical darta \n "),)),
-              Expanded(child: Container()),
+            children: const  [
+              Expanded(child: SizedBox(child: Text("Your medical darta \n is always with you"),)),
+              Expanded(child: SizedBox(child: Text("Nunc orci sed sed posuere volutpat varius egestas sit. Amet, suscipit eget dis fusce quam in aliquet pulvinar"),)),
             ],
           ),
           Container(
