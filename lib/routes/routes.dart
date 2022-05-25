@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:med/Screens/auth/home_auth/home_auth.dart';
+import 'package:med/Screens/auth/sing_in/sing_in_auth.dart';
 import 'package:med/Screens/auth/splash/splash_auth.dart';
 
 class MyRoutes {
@@ -8,22 +10,18 @@ class MyRoutes {
   Route? onGeneretRoute(RouteSettings settings) {
     var args = settings.arguments;
     switch (settings.name) {
-      case "splash":
-        return material(SplashAuth());
-      case "auth":
-        return material(SplashAuth());
-      case "sing_in":
-        return material(SplashAuth());
-      case "sing_up":
-        return material(SplashAuth());
-      case "password":
-        return material(SplashAuth());
-        case "personal_ID":
-        return material(SplashAuth());
+      case "/splash":
+        return MaterialPageRoute(builder: (context) => SplashAuth());
+      case "/auth":
+        return MaterialPageRoute(builder: (context) => HomeAuthPage());
+      case "/sing_in":
+        return MaterialPageRoute(builder: (context) => LogInPage());
+      case "/sing_up":
+        return MaterialPageRoute(builder: (context) => HomeAuthPage());
+      case "/password":
+        return MaterialPageRoute(builder: (context) => HomeAuthPage());
+      case "/personal_ID":
+        return MaterialPageRoute(builder: (context) => HomeAuthPage());
     }
-  }
-
-  material(Widget page) {
-    MaterialPageRoute(builder: (context) => page);
   }
 }

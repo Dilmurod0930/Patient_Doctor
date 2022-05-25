@@ -15,13 +15,13 @@ class _SplashAuthState extends State<SplashAuth> {
     super.initState();
     Future.delayed(
       Duration(seconds: time),
-      () => Navigator.pushReplacementNamed(context, "lang"),
+      () => Navigator.pushReplacementNamed(context, "/home"),
     );
   }
   @override
   Widget build(BuildContext context) {
-    return Container(
-      child: const Center(child: Text("Splash Page", style: TextStyle(fontSize: 33),)),
+    return Scaffold(
+      body: const Center(child: Text("Splash Page", style: TextStyle(fontSize: 33),)),
       
     );
   }
