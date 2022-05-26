@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class SplashAuth extends StatefulWidget {
-  const SplashAuth({ Key? key }) : super(key: key);
+  const SplashAuth({Key? key}) : super(key: key);
 
   @override
   State<SplashAuth> createState() => _SplashAuthState();
@@ -18,11 +18,11 @@ class _SplashAuthState extends State<SplashAuth> {
       () => Navigator.pushReplacementNamed(context, "/home"),
     );
   }
+
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: const Center(child: Text("Splash Page", style: TextStyle(fontSize: 33),)),
-      
+    return Container(
+      child: Image.asset('assets/images/splash.png',fit: BoxFit.cover),
     );
   }
 }

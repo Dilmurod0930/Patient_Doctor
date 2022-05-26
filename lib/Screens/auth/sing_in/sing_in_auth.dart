@@ -52,7 +52,7 @@ class _LogInPageState extends State<LogInPage> {
                   ),
                   validator: (value) {
                     if (value!.isEmpty) {
-                      return 'Your password';
+                      return 'Phone ';
                     }
                     return null;
                   },
