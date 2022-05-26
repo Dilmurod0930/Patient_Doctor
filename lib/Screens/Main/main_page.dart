@@ -58,11 +58,13 @@ class _MainPageState extends State<MainPage> {
                 context.read<HomeCubit>().change(index);
               },
             ),
+            body:  _widgetOptions[selectedIndex],
           );
         } else {
           return const Text("Hatoo");
         }
       },
+      
     );
   }
 }
