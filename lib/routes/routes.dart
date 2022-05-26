@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:med/Screens/auth/home_auth/home_auth.dart';
 import 'package:med/Screens/auth/sing_in/sing_in_auth.dart';
 import 'package:med/Screens/auth/sing_up/sing_up_auth.dart';
+import 'package:med/Screens/auth/sing_up/sing_up_persanal.dart';
 import 'package:med/Screens/auth/splash/splash_auth.dart';
 
 class MyRoutes {
@@ -22,7 +23,9 @@ class MyRoutes {
       case "/password":
         return MaterialPageRoute(builder: (context) => HomeAuthPage());
       case "/personal_ID":
-        return MaterialPageRoute(builder: (context) => HomeAuthPage());
+        return MaterialPageRoute(builder: (context) => SintUpPersonalID());
+      case "/main":
+        return MaterialPageRoute(builder: (context) => SintUpPersonalID());
     }
   }
 }

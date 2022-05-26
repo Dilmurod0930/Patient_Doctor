@@ -63,7 +63,7 @@ class _SingUpPageState extends State<SingUpPage> {
               Padding(
                 padding: const EdgeInsets.all(8.0),
                 child: TextFormField(
-                  controller: _passwordController,
+                  controller: _phoneController,
                   decoration: const InputDecoration(
                     fillColor: Colors.grey,
                     focusColor: Colors.grey,
@@ -133,7 +133,7 @@ class _SingUpPageState extends State<SingUpPage> {
                           String email = _nameController.text.trim();
                           String password = _passwordController.text.trim();
                           String phone = _phoneController.text.trim();
-                          Navigator.pushNamed(context, "/");
+                          Navigator.pushNamed(context, "/personal_ID");
                         }
                       },
                     ),
