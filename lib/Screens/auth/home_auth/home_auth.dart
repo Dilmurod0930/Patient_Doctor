@@ -13,9 +13,9 @@ class HomeAuthPage extends StatelessWidget {
           title: const Text('HomrAuth Page'),
         ),
         body: Column(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: [
-            Container(),
+           Row(children: [ SizedBox(width: 80,),Image.asset('assets/images/rasm.png')],),
             Column(
               children: const [
                 SizedBox(

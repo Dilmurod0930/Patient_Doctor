@@ -17,7 +17,7 @@ class _SingUpPageState extends State<SingUpPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(centerTitle: true, title: const Text("Sing Up")),
-      body: Padding(
+      body:SingleChildScrollView(child: SizedBox(child:  Padding(
         padding: const EdgeInsets.all(8.0),
         child: Form(
           key: _formKey,
@@ -143,7 +143,7 @@ class _SingUpPageState extends State<SingUpPage> {
             ],
           ),
         ),
-      ),
+      ),),)
     );
   }
 }
