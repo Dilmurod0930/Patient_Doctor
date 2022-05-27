@@ -88,7 +88,10 @@ class _AddPageState extends State<AddPage> {
                                 fontSize: 22,
                               ),
                             ),
-                            onPressed: () {},
+                            onPressed: () {
+                              Navigator.pushNamedAndRemoveUntil(
+                                  context, "newRouteName", (route) => false);
+                            },
                           ),
                         ),
                       ),
