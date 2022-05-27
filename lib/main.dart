@@ -6,11 +6,7 @@ import 'package:med/routes/routes.dart';
 void main() async {
   runApp(
     MultiBlocProvider(
-      providers: [
-        BlocProvider(
-          create: (context) => HomeCubit(),
-        ),
-      ],
+      providers: [BlocProvider(create: (context) => HomeCubit())],
       child: const MyApp(),
     ),
   );
@@ -23,7 +19,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Doctor',
-      theme: ThemeData(primarySwatch: Colors.blue),
+      theme: ThemeData(primarySwatch: Colors.grey),
       debugShowCheckedModeBanner: false,
       initialRoute: "/splash",
       onGenerateRoute: MyRoutes.instants.onGeneretRoute,

@@ -3,7 +3,6 @@ import 'package:med/core/components/main_botton.dart';
 import 'package:med/core/components/medication.d_comp.dart';
 import 'package:med/core/constants/color_const.dart';
 import 'package:med/core/constants/font_const.dart';
-import 'package:med/core/init/navigatot_service.dart';
 
 class HomeMainpage extends StatelessWidget {
   const HomeMainpage({Key? key}) : super(key: key);
@@ -16,6 +15,25 @@ class HomeMainpage extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
+            const SizedBox(height: 18),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                const CircleAvatar(
+                  child: Icon((Icons.person)),
+                  radius: 16,
+                ),
+                Image.asset('assets/images/apbar.png'),
+                IconButton(
+                  onPressed: () {},
+                  icon: const Icon(Icons.notifications),
+                )
+              ],
+            ),
+             Divider(
+                color: ColorConst.black.withOpacity(0.8),
+              ),
+            const SizedBox(height: 18),
             Text(
               "Today's medications",
               style: TextStyle(
@@ -76,7 +94,10 @@ class HomeMainpage extends StatelessWidget {
             InkWell(
               child: mainButton(context, "Add new appointment"),
               onTap: () {
-                NavigationService.instance.pushNamed("add_apointment");
+                Navigator.pushNamed(
+                  context,
+                  "/add",
+                );
               },
             )
           ],

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:med/core/constants/color_const.dart';
+import 'package:med/core/constants/font_const.dart';
 
 class SintUpPersonalID extends StatelessWidget {
   const SintUpPersonalID({Key? key}) : super(key: key);
@@ -28,15 +29,60 @@ class SintUpPersonalID extends StatelessWidget {
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text("Your ID"),
-                  Container(
-                    height: MediaQuery.of(context).size.height * 0.098,
-                    width: MediaQuery.of(context).size.width * 0.9,
+               const   Text("Your ID"),
+                 Container(
+                    width: MediaQuery.of(context).size.width,
+                    height: MediaQuery.of(context).size.height * 0.07,
                     decoration: BoxDecoration(
-                      color: Colors.red,
-                      borderRadius: BorderRadius.circular(15),
+                      border:
+                          Border.all(color: ColorConst.black.withOpacity(0.4)),
+                      borderRadius: BorderRadius.circular(12),
+                    ),
+                    child: Row(
+                      children: [
+                        Expanded(
+                          flex: 5,
+                          child: Container(
+                            alignment: Alignment.centerLeft,
+                            height: MediaQuery.of(context).size.height * 0.07,
+                            decoration: BoxDecoration(
+                              border: Border.all(color: ColorConst.black.withOpacity(0.2)),
+                              borderRadius:const BorderRadius.only(
+                                topLeft: Radius.circular(10),
+                                bottomLeft: Radius.circular(10),
+                              ),
+                              color: ColorConst.black.withOpacity(0.15),
+                            ),
+                            child: Padding(
+                              padding: const EdgeInsets.all(12.0),
+                              child: Text(
+                                "25983365",
+                                style: TextStyle(fontSize: FontConst.mediumFont),
+                              ),
+                            ),
+                          ),
+                        ),
+                        Expanded(
+                          flex: 2,
+                          child: Row(
+                            children: [
+                              Container(
+                                margin: const EdgeInsets.symmetric(horizontal: 10),
+                                child: Text(
+                                  "copy",
+                                  style: TextStyle(
+                                    fontSize: FontConst.largeFont,
+                                  ),
+                                ),
+                              ),
+                              // SvgPicture.asset("assets/icons/copy.svg")
+                            ],
+                          ),
+                        ),
+                      ],
                     ),
                   ),
+
                 ],
               ),
               Container(
