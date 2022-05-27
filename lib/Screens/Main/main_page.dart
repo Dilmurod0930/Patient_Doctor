@@ -3,7 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:med/Screens/Main/bloc/main_cubit.dart';
 import 'package:med/Screens/Main/bloc/main_state.dart';
 import 'package:med/Screens/Main/doctor/doctor_page.dart';
-import 'package:med/Screens/Main/home/home_main_page.dart';
+import 'package:med/Screens/Main/home/calengar_page.dart';
 import 'package:med/Screens/Main/hosptal/hospital_page.dart';
 import 'package:med/Screens/Main/muolaja/muolaja_page.dart';
 
@@ -16,7 +16,7 @@ class MainPage extends StatefulWidget {
 
 class _MainPageState extends State<MainPage> {
   static const List<Widget> _widgetOptions = <Widget>[
-    HomeMainpage(),
+    CalendarPage(),
     MuolajaPage(),
     DoctorPage(),
     HospitlPage()
@@ -58,13 +58,17 @@ class _MainPageState extends State<MainPage> {
                 context.read<HomeCubit>().change(index);
               },
             ),
-            body:  _widgetOptions[selectedIndex],
+            body: _widgetOptions[selectedIndex],
           );
         } else {
-          return const Text("Hatoo");
+          return const Center(
+            child: Text(
+              "Internetda xatolik bor ",
+              style: TextStyle(fontSize: 22),
+            ),
+          );
         }
       },
-      
     );
   }
 }
