@@ -55,7 +55,7 @@ class _MainPageState extends State<MainPage> {
               ],
               currentIndex: selectedIndex,
               onTap: (index) {
-                context.read<HomeCubit>().change(index);
+                context.read<HomeCubit>().changePage(index);
               },
             ),
             body: _widgetOptions[selectedIndex],

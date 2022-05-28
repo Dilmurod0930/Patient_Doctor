@@ -49,7 +49,7 @@ class _AddPageState extends State<AddPage> {
                     children: [
                       const Text("Region"),
                       const SizedBox(height: 18),
-                      inputfield("Choose hospital region.."),
+                      inputfield("Choose hospital region..",),
                       const SizedBox(height: 18),
                       const Text("District"),
                       const SizedBox(height: 18),
@@ -90,7 +90,7 @@ class _AddPageState extends State<AddPage> {
                             ),
                             onPressed: () {
                               Navigator.pushNamedAndRemoveUntil(
-                                  context, "newRouteName", (route) => false);
+                                  context, "/muolaja", (route) => false);
                             },
                           ),
                         ),

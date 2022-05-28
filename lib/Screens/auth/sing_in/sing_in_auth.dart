@@ -109,7 +109,7 @@ class _LogInPageState extends State<LogInPage> {
                           if (_formKey.currentState!.validate()) {
                             String email = _nameController.text.trim();
                             String password = _passwordController.text.trim();
-                            Navigator.pushNamed(context, "/");
+                            Navigator.pushNamed(context, "/profil");
                           }
                         },
                       ),

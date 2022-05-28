@@ -3,6 +3,7 @@ import 'package:med/core/components/main_botton.dart';
 import 'package:med/core/components/medication.d_comp.dart';
 import 'package:med/core/constants/color_const.dart';
 import 'package:med/core/constants/font_const.dart';
+import 'package:table_calendar/table_calendar.dart';
 
 class HomeMainpage extends StatelessWidget {
   const HomeMainpage({Key? key}) : super(key: key);
@@ -30,9 +31,9 @@ class HomeMainpage extends StatelessWidget {
                 )
               ],
             ),
-             Divider(
-                color: ColorConst.black.withOpacity(0.8),
-              ),
+            Divider(
+              color: ColorConst.black.withOpacity(0.8),
+            ),
             const SizedBox(height: 18),
             Text(
               "Today's medications",
@@ -44,6 +45,7 @@ class HomeMainpage extends StatelessWidget {
             ),
             medicationappoint(context, "No medications",
                 "They will appear here only when doctor adds them to your account "),
+                SizedBox(height: MediaQuery.of(context).size.height * 0.2),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
@@ -56,19 +58,28 @@ class HomeMainpage extends StatelessWidget {
                 ),
                 Row(
                   children: [
-                    Text(
-                      "January 2022",
-                      style: TextStyle(
+                    TextButton(
+                      child: Text(
+                        "May 2022 ^ ",
+                        style: TextStyle(
                           fontSize: FontConst.mediumFont,
                           color: ColorConst.blue,
-                          fontWeight: FontWeight.w600),
+                          fontWeight: FontWeight.w600,
+                        ),
+                      ),
+                      onPressed: () {},
                     ),
                   ],
                 ),
               ],
             ),
             SizedBox(
-              height: MediaQuery.of(context).size.height * 0.05,
+              height: MediaQuery.of(context).size.height * 0.5,
+              child: TableCalendar(
+                firstDay: DateTime.utc(2010, 10, 16),
+                lastDay: DateTime.utc(2030, 3, 14),
+                focusedDay: DateTime.now(),
+              ),
             ),
             Row(
               children: [
@@ -94,10 +105,7 @@ class HomeMainpage extends StatelessWidget {
             InkWell(
               child: mainButton(context, "Add new appointment"),
               onTap: () {
-                Navigator.pushNamed(
-                  context,
-                  "/add",
-                );
+                Navigator.pushNamed(context, "/add");
               },
             )
           ],

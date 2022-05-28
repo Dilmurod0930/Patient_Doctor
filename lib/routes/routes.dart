@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:med/Screens/Main/home/add_page.dart';
 import 'package:med/Screens/Main/main_page.dart';
+import 'package:med/Screens/Main/muolaja/muolaja_page.dart';
+import 'package:med/Screens/Profil/profil/asd/profil_page.dart';
 import 'package:med/Screens/auth/home_auth/home_auth.dart';
 import 'package:med/Screens/auth/sing_in/sing_in_auth.dart';
 import 'package:med/Screens/auth/sing_up/sing_up_auth.dart';
@@ -30,8 +32,10 @@ class MyRoutes {
         return MaterialPageRoute(builder: (context) => MainPage());
       case "/add":
         return MaterialPageRoute(builder: (context) => AddPage());
+      case "/muolaja":
+        return MaterialPageRoute(builder: (context) => MuolajaPage());
+      // case "/profil":
+      //   return MaterialPageRoute(builder: (context) => ProfilePage());
     }
   }
-} 
-
-
+}
