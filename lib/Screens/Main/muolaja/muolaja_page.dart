@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:med/Screens/Main/muolaja/pages/medical_history_muolaja_page.dart';
+import 'package:med/Screens/Main/muolaja/pages/drug_history_muolaja.dart';
+import 'package:med/Screens/Main/muolaja/pages/treatment_muolaja_page.dart';
 
 class MuolajaPage extends StatefulWidget {
   const MuolajaPage({Key? key}) : super(key: key);
@@ -23,25 +26,25 @@ class _MuolajaPageState extends State<MuolajaPage>
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        leading: const  CircleAvatar(radius: 10),
+        leading: const CircleAvatar(radius: 10, child: Icon(Icons.person)),
         centerTitle: true,
         title: Image.asset('assets/images/apbar.png'),
-        actions: [Icon(Icons.notifications,size: 32,)],
+        actions: const [Icon(Icons.notifications, size: 32)],
         bottom: TabBar(
           controller: tabController,
           tabs: const [
-            Tab(icon: Text("fsdffsdf")),
-            Tab(icon: Text("sfsdf")),
-            Tab(icon: Text("dkljfa"))
+            Tab(icon: Text("Treatment")),
+            Tab(icon: Text("Medical history")),
+            Tab(icon: Text("Drug history"))
           ],
         ),
       ),
       body: TabBarView(
         controller: tabController,
-        children: <Widget>[
-          Container(color: Colors.red),
-          Container(color: Colors.yellow),
-          Container(color: Colors.blue)
+        children: const <Widget>[
+          TreatmentPage(),
+          MedicalHistoryPage(),
+          DrugHistoryPage()
         ],
       ),
     );
