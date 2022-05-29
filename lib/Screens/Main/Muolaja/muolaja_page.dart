@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:med/Screens/Main/muolaja/pages/medical_history_muolaja_page.dart';
-import 'package:med/Screens/Main/muolaja/pages/drug_history_muolaja.dart';
-import 'package:med/Screens/Main/muolaja/pages/treatment_muolaja_page.dart';
+import 'package:med/Screens/Main/Muolaja/pages/DrugHistory/drug_history_muolaja.dart';
+import 'package:med/Screens/Main/Muolaja/pages/MedicalHistory/medical_history_muolaja_page.dart';
+import 'package:med/Screens/Main/Muolaja/pages/Treatment/treatment_muolaja_page.dart';
 
 class MuolajaPage extends StatefulWidget {
   const MuolajaPage({Key? key}) : super(key: key);

@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:med/Screens/Main/Muolaja/muolaja_page.dart';
 import 'package:med/Screens/Main/bloc/main_cubit.dart';
 import 'package:med/Screens/Main/bloc/main_state.dart';
 import 'package:med/Screens/Main/doctor/doctor_page.dart';
 import 'package:med/Screens/Main/home/home_main_page.dart';
 import 'package:med/Screens/Main/hosptal/hospital_page.dart';
-import 'package:med/Screens/Main/muolaja/muolaja_page.dart';
 
 class MainPage extends StatefulWidget {
   const MainPage({Key? key}) : super(key: key);
