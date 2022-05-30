@@ -6,6 +6,7 @@ import 'package:med/Screens/Main/bloc/main_state.dart';
 import 'package:med/Screens/Main/doctor/doctor_page.dart';
 import 'package:med/Screens/Main/home/home_main_page.dart';
 import 'package:med/Screens/Main/hosptal/hospital_page.dart';
+import 'package:med/core/constants/color_const.dart';
 
 class MainPage extends StatefulWidget {
   const MainPage({Key? key}) : super(key: key);
@@ -34,7 +35,8 @@ class _MainPageState extends State<MainPage> {
         } else if (state is InitialMain) {
           return Scaffold(
             bottomNavigationBar: BottomNavigationBar(
-              unselectedItemColor: Colors.grey,
+              unselectedItemColor: Colors.grey ,
+              selectedItemColor: ColorConst.blue,
               items: const <BottomNavigationBarItem>[
                 BottomNavigationBarItem(
                   icon: Icon(Icons.home),
@@ -42,15 +44,15 @@ class _MainPageState extends State<MainPage> {
                 ),
                 BottomNavigationBarItem(
                   icon: Icon(Icons.vaccines),
-                  label: 'Zikirlar',
+                  label: 'Treatments',
                 ),
                 BottomNavigationBarItem(
                   icon: Icon(Icons.medical_services),
-                  label: 'Info',
+                  label: 'Doctors',
                 ),
                 BottomNavigationBarItem(
                   icon: Icon(Icons.maps_home_work),
-                  label: 'Settings',
+                  label: 'Hospitals',
                 ),
               ],
               currentIndex: selectedIndex,

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:med/Screens/Main/Muolaja/pages/DrugHistory/drug_history_muolaja.dart';
 import 'package:med/Screens/Main/Muolaja/pages/MedicalHistory/medical_history_muolaja_page.dart';
 import 'package:med/Screens/Main/Muolaja/pages/Treatment/treatment_muolaja_page.dart';
+import 'package:med/core/constants/color_const.dart';
 
 class MuolajaPage extends StatefulWidget {
   const MuolajaPage({Key? key}) : super(key: key);
@@ -25,17 +26,17 @@ class _MuolajaPageState extends State<MuolajaPage>
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
+      appBar: AppBar(backgroundColor: ColorConst.white,elevation: 0,
         leading: const CircleAvatar(radius: 10, child: Icon(Icons.person)),
         centerTitle: true,
         title: Image.asset('assets/images/apbar.png'),
-        actions: const [Icon(Icons.notifications, size: 32)],
+        actions: const [Icon(Icons.notifications, size: 32,color: Colors.grey,)],
         bottom: TabBar(
-          controller: tabController,
+          controller: tabController,indicatorColor: ColorConst.grey,
           tabs: const [
-            Tab(icon: Text("Treatment")),
-            Tab(icon: Text("Medical history")),
-            Tab(icon: Text("Drug history"))
+            Tab(icon: Text("Treatment", style: TextStyle(color: Colors.grey))),
+            Tab(icon: Text("Medical history",style: TextStyle(color: Colors.grey))),
+            Tab(icon: Text("Drug history",style: TextStyle(color: Colors.grey)))
           ],
         ),
       ),

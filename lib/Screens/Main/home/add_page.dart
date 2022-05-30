@@ -90,7 +90,7 @@ class _AddPageState extends State<AddPage> {
                             ),
                             onPressed: () {
                               Navigator.pushNamedAndRemoveUntil(
-                                  context, "/muolaja", (route) => false);
+                                  context, "/", (route) => false);
                             },
                           ),
                         ),

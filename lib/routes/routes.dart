@@ -1,5 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:med/Screens/Main/Muolaja/muolaja_page.dart';
+import 'package:med/Screens/Main/Muolaja/pages/DrugHistory/drug_history_detals/drug_detals_page.dart';
+import 'package:med/Screens/Main/Muolaja/pages/MedicalHistory/medical_trement_details/medical_treatmtnt_page.dart';
+import 'package:med/Screens/Main/Muolaja/pages/Treatment/treatment_details/treatme_details_page.dart';
+import 'package:med/Screens/Main/Muolaja/pages/Treatment/treatment_muolaja_page.dart';
 import 'package:med/Screens/Main/home/add_page.dart';
 import 'package:med/Screens/Main/main_page.dart';
 import 'package:med/Screens/Profil/profil/asd/profil_page.dart';
@@ -34,8 +38,17 @@ class MyRoutes {
         return MaterialPageRoute(builder: (context) => AddPage());
       case "/muolaja":
         return MaterialPageRoute(builder: (context) => MuolajaPage());
-      // case "/profil":
-      //   return MaterialPageRoute(builder: (context) => ProfilePage());
+      case "/details":
+        return MaterialPageRoute(builder: (context) => MedicalTreatmentPage());
+      case "/T_details":
+        return MaterialPageRoute(builder: (context) => TreatmentDetailsPage());
+      case "/treament":
+        return MaterialPageRoute(builder: (context) => TreatmentPage());
+        case "/drug_detals":
+        return MaterialPageRoute(builder: (context) => TakenDrugDetailsPage());
+      case "/profil":
+        return MaterialPageRoute(builder: (context) => ProfilePage());
+
     }
   }
 }

@@ -16,7 +16,7 @@ class TreatmentPage extends StatelessWidget {
                 icon: const Icon(
                   Icons.arrow_forward_ios,
                 ),
-                onPressed: () {},
+                onPressed: () { Navigator.pushNamed(context, "/T_details");},
               ),
             ),
             const Divider(height: 26, thickness: 2),
@@ -27,7 +27,9 @@ class TreatmentPage extends StatelessWidget {
                 icon: const Icon(
                   Icons.arrow_forward_ios,
                 ),
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.pushNamed(context, "/T_details");
+                },
               ),
             )
           ],
