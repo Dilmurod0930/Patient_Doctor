@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:med/core/components/text_fild_comp.dart';
 import 'package:med/core/constants/color_const.dart';
+import 'package:med/core/constants/font_const.dart';
 
 class AddPage extends StatefulWidget {
   const AddPage({Key? key}) : super(key: key);
@@ -49,7 +50,9 @@ class _AddPageState extends State<AddPage> {
                     children: [
                       const Text("Region"),
                       const SizedBox(height: 18),
-                      inputfield("Choose hospital region..",),
+                      inputfield(
+                        "Choose hospital region..",
+                      ),
                       const SizedBox(height: 18),
                       const Text("District"),
                       const SizedBox(height: 18),
@@ -89,8 +92,92 @@ class _AddPageState extends State<AddPage> {
                               ),
                             ),
                             onPressed: () {
-                              Navigator.pushNamedAndRemoveUntil(
-                                  context, "/", (route) => false);
+                              showModalBottomSheet(
+                                isScrollControlled: true,
+                                shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(13),
+                                ),
+                                context: context,
+                                builder: (context) {
+                                  return SizedBox(
+                                    height: MediaQuery.of(context).size.height *
+                                        0.5,
+                                    child: Column(
+                                      crossAxisAlignment:
+                                          CrossAxisAlignment.start,
+                                      children: [
+                                        Expanded(
+                                          child: Center(
+                                            child: SizedBox(
+                                              child: Image.asset(
+                                                  'assets/images/chek.png'),
+                                            ),
+                                          ),
+                                        ),
+                                        Expanded(
+                                          child: Padding(
+                                            padding: const EdgeInsets.all(10.0),
+                                            child: Column(
+                                              children: const [
+                                                Text(
+                                                  '   Your have successfully booked \n \t  an appointment',
+                                                  style: TextStyle(
+                                                      fontWeight:
+                                                          FontWeight.bold,
+                                                      fontSize: 22),
+                                                ),
+                                                Padding(
+                                                  padding: EdgeInsets.all(8.0),
+                                                  child: Text(
+                                                    'You can go to Mavlonov Boburjon on January 24 at 10:00 - 11:00',
+                                                    style: TextStyle(
+                                                        fontWeight:
+                                                            FontWeight.bold,
+                                                        fontSize: 14),
+                                                  ),
+                                                )
+                                              ],
+                                            ),
+                                          ),
+                                        ),
+                                        Padding(
+                                          padding: const EdgeInsets.all(28.0),
+                                          child: Container(
+                                            height: MediaQuery.of(context)
+                                                    .size
+                                                    .height *
+                                                0.0699,
+                                            width: MediaQuery.of(context)
+                                                    .size
+                                                    .width *
+                                                0.9,
+                                            decoration: BoxDecoration(
+                                              color: ColorConst.kBotton,
+                                              borderRadius:
+                                                  BorderRadius.circular(23),
+                                            ),
+                                            child: TextButton(
+                                              child: const Text(
+                                                "Go home",
+                                                style: TextStyle(
+                                                    fontSize: 18,
+                                                    color: ColorConst.white),
+                                              ),
+                                              onPressed: () {
+                                                Navigator
+                                                    .pushNamedAndRemoveUntil(
+                                                        context,
+                                                        "/main",
+                                                        (route) => false);
+                                              },
+                                            ),
+                                          ),
+                                        )
+                                      ],
+                                    ),
+                                  );
+                                },
+                              );
                             },
                           ),
                         ),

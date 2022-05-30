@@ -7,6 +7,7 @@ class TreatmentDetailsPage extends StatefulWidget {
   const TreatmentDetailsPage({Key? key}) : super(key: key);
   @override
   State<TreatmentDetailsPage> createState() => _TreatmentDetailsPageState();
+  
 
   static textTreatDetl2(text) => Padding(
         padding: const EdgeInsets.only(bottom: 25),
@@ -34,6 +35,9 @@ class TreatmentDetailsPage extends StatefulWidget {
 }
 
 class _TreatmentDetailsPageState extends State<TreatmentDetailsPage> {
+
+  List data = [ "Salicylic","Calcipotriol","Tazorac"];
+  List ml = [ "250","500","100"];
 @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -50,7 +54,7 @@ class _TreatmentDetailsPageState extends State<TreatmentDetailsPage> {
                     Center(
                       child: Padding(
                         padding: const EdgeInsets.all(24),
-                        child: CircleAvatar(
+                        child: CircleAvatar(child: const  Icon(Icons.person ,size: 88,),
                             radius: MediaQuery.of(context).size.height * 0.07),
                       ),
                     ),
@@ -89,9 +93,9 @@ class _TreatmentDetailsPageState extends State<TreatmentDetailsPage> {
                     SizedBox(
                       height: MediaQuery.of(context).size.height * 0.2,
                       child: ListView.builder(
-                        itemCount: 2,
+                        itemCount: data.length,
                         itemBuilder: (context, index) {
-                          return drugBeingMethod("", "100 ml");
+                          return drugBeingMethod("${data[index]}", "${ml[index]} ml");
                         },
                       ),
                     )

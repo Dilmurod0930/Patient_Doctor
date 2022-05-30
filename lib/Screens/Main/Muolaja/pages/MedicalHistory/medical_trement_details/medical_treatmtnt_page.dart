@@ -11,10 +11,9 @@ class MedicalTreatmentPage extends StatefulWidget {
 }
 
 class _MedicalTreatmentPageState extends State<MedicalTreatmentPage> {
-  // @override
-  // void initState() {
-  //   super.initState();
-  // }
+  List data = ["Salicylic", "Calcipotriol", "Tazorac"];
+  List ml = ["250", "500", "100"];
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -32,6 +31,7 @@ class _MedicalTreatmentPageState extends State<MedicalTreatmentPage> {
                       child: Padding(
                         padding: const EdgeInsets.all(24),
                         child: CircleAvatar(
+                            child: const Icon(Icons.person, size: 88),
                             radius: MediaQuery.of(context).size.height * 0.07),
                       ),
                     ),
@@ -70,18 +70,23 @@ class _MedicalTreatmentPageState extends State<MedicalTreatmentPage> {
                     SizedBox(
                       height: MediaQuery.of(context).size.height * 0.2,
                       child: ListView.builder(
-                        itemCount: 2,
+                        itemCount: 3,
                         itemBuilder: (context, index) {
-                          return drugBeingMethod("", "100 ml");
+                          return drugBeingMethod(
+                              "${data[index]}", "${ml[index]} ml");
                         },
                       ),
-                    )
+                    ),
+                    const SizedBox(
+                      child: Text(
+                          "You will need a blood test for your doctor to find out if you have hypokalemia. They will ask you about your health history. They’ll want to know if you’ve had any illness that involved vomiting or diarrhea. They’ll ask about any conditions you might have that could be causing it.Since low potassium sometimes can affect your blood pressure, your doctor will check that, too."),
+                    ),
                   ],
                 ),
               ),
             ),
           ),
-          SizedBox(height: MediaQuery.of(context).size.height * 0.05)
+          SizedBox(height: MediaQuery.of(context).size.height * 0.05),
         ],
       ),
     );
