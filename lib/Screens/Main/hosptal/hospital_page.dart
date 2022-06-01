@@ -16,10 +16,16 @@ class _HospitlPageState extends State<HospitlPage> {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.white,
-        leading: Container( decoration: BoxDecoration(
-          color: ColorConst.grey.withOpacity(0.5),
-          borderRadius: BorderRadius.circular(92),),child: Icon(Icons.person, color: ColorConst.grey,),),
-        
+        leading: Container(
+          decoration: BoxDecoration(
+            color: ColorConst.grey.withOpacity(0.5),
+            borderRadius: BorderRadius.circular(92),
+          ),
+          child: Icon(
+            Icons.person,
+            color: ColorConst.grey,
+          ),
+        ),
         centerTitle: true,
         title: Image.asset('assets/images/apbar.png'),
         actions: [

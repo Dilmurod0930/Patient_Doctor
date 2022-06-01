@@ -40,9 +40,9 @@ class _ProfilePageState extends State<ProfilePage> {
                         SizedBox(
                           height: MediaQuery.of(context).size.height * 0.01,
                         ),
-                        const CircleAvatar(
+                         CircleAvatar(
                           radius: 60,
-                          // backgroundImage: AssetImage("assets/images/id.png"),
+                          child: Icon(Icons.person, color: ColorConst.red),
                         ),
                         SizedBox(
                           height: MediaQuery.of(context).size.height * 0.03,
