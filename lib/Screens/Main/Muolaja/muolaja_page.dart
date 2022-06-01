@@ -27,7 +27,7 @@ class _MuolajaPageState extends State<MuolajaPage>
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(backgroundColor: ColorConst.white,elevation: 0,
-        leading: const CircleAvatar(radius: 10, child: Icon(Icons.person)),
+        leading: const CircleAvatar(radius: 7,backgroundColor: Colors.grey, child: Icon(Icons.person, color: Colors.black,), ),
         centerTitle: true,
         title: Image.asset('assets/images/apbar.png'),
         actions: const [Icon(Icons.notifications, size: 32,color: Colors.grey,)],

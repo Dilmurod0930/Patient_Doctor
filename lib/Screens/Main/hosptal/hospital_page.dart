@@ -16,24 +16,29 @@ class _HospitlPageState extends State<HospitlPage> {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.white,
+        leading: Container( decoration: BoxDecoration(
+          color: ColorConst.grey.withOpacity(0.5),
+          borderRadius: BorderRadius.circular(92),),child: Icon(Icons.person, color: ColorConst.grey,),),
+        
+        centerTitle: true,
+        title: Image.asset('assets/images/apbar.png'),
+        actions: [
+          IconButton(
+            onPressed: () {},
+            icon: Image.asset('assets/images/icon.png'),
+          ),
+        ],
         elevation: 0,
       ),
       body: Column(
         children: [
           Column(
             children: [
-              SizedBox(
-                height: MediaQuery.of(context).size.height * 0.04,
-              ),
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 15),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [],
                 ),
-              ),
-              SizedBox(
-                height: MediaQuery.of(context).size.height * 0.04,
               ),
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 20),
