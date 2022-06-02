@@ -35,7 +35,9 @@ class _HospitlPageState extends State<HospitlPage> {
         title: Image.asset('assets/images/apbar.png'),
         actions: [
           IconButton(
-            onPressed: () {},
+            onPressed: () {
+              
+            },
             icon: Image.asset('assets/images/icon.png'),
           ),
         ],
@@ -74,30 +76,41 @@ class _HospitlPageState extends State<HospitlPage> {
                         itemBuilder: (context, index) {
                           return Column(
                             children: [
-                              Container(
-                                height:
-                                    MediaQuery.of(context).size.height * 0.4,
-                                width: MediaQuery.of(context).size.width * 0.9,
-                                decoration: BoxDecoration(
-                                  color: ColorConst.red,
-                                  borderRadius: BorderRadius.circular(20),
-                                ),
-                                child: Image.network(
-                              "https://source.unsplash.com/random/$index", fit: BoxFit.cover,),
+                              Stack(
+                                children: [
+                                  Container(
+                                    height: MediaQuery.of(context).size.height *
+                                        0.4,
+                                    width:
+                                        MediaQuery.of(context).size.width * 0.9,
+                                    decoration: BoxDecoration(
+                                      color: ColorConst.red,
+                                      borderRadius: BorderRadius.circular(20),
+                                    ),
+                                    child: Image.network(
+                                      "https://source.unsplash.com/random/$index",
+                                      fit: BoxFit.cover,
+                                    ),
+                                  ),
+                                ],
                               ),
-                              SizedBox(height: MediaQuery.of(context).size.height * 0.0199,),
+                              SizedBox(
+                                height:
+                                    MediaQuery.of(context).size.height * 0.0199,
+                              ),
                               Column(
                                 children: [
                                   Text(
                                     "Uzbekistan New International Clinic",
                                     style: TextStyle(
-                                    fontSize: 20,
+                                        fontSize: 20,
                                         fontWeight: FontWeight.bold,
                                         color: ColorConst.black),
                                   ),
                                   Text(
                                     "Tashkent, Shaykhontokhur, Navoi street",
-                                    style: TextStyle(fontSize: 18,
+                                    style: TextStyle(
+                                        fontSize: 18,
                                         fontWeight: FontWeight.bold,
                                         color: ColorConst.grey),
                                   )
