@@ -2,11 +2,11 @@ class DoctorData {
   static List doctors = [
     {
       "name": "Mavlonov Asad",
-      "typeDoctor ": "Dermatolog",
+      "typeDoctor": " Pulmonolog",
       "placeOfWork": "Pediatric hospital N14",
       "location": "Shayhontohur district, st.Zulfiyahonum,18,Tashkent , 100128",
       "availebleTime": "10:00-16:00",
-      "rating": "4",
+      "rating": "2",
       
     },
     {
@@ -16,7 +16,7 @@ class DoctorData {
       "location": "Mirzo Ulugbek district st , Uzbekistan, 10",
       "availebleTime ": "9:00-17:00",
       "rating": "3",
-      " img ": "https://source.unsplash.com/random"
+      
     },
     {
       "name": "Sadullayed Sodiq",
@@ -25,70 +25,25 @@ class DoctorData {
       "location": "Sergeli district st. Yangi hayot 12 ",
       "availebleTime": "11:00-19:00",
       "rating": "5",
-      "img": "https://source.unsplash.com/random"
+      
     },
     {
       "name": "Axmedov Axmad",
-      "typeDoctor": "Dentist",
+      "typeDoctor": "Pulmonolog",
       'placeOfWork': "Pediatric hospital N14",
       'location': "Shayhontohur district, st.Zulfiyahonum,18,Tashkent , 100128",
       'availebleTime': "10:00-16:00",
       "rating": "4",
-      'img': "https://source.unsplash.com/random"
+      
     },
-    // {
-    //   "name": "Mansur Isroilov",
-    //   "typeDoctor": "Dentist",
-    //   "placeOfWork": "Dentistic hospital N1",
-    //   "location": "Sergeli district st. Yangi hayot 12 ",
-    //   "availebleTime": "11:00-19:00",
-    //   "rating": "5",
-    //   "img": "https://source.unsplash.com/random"
-    // },
-    // {
-    //   "name": "Jabbor Sattorov",
-    //   "typeDoctor": "Dentist",
-    //   "placeOfWork": "Dentistic hospital N1",
-    //   "location": "Sergeli district st. Yangi hayot 12 ",
-    //   "availebleTime": "11:00-19:00",
-    //   "rating": "5",
-    //   "img": "https://source.unsplash.com/random"
-    // },
-    // {
-    //   "name": "Zafar Tursunov",
-    //   "typeDoctor": "Dentist",
-    //   "placeOfWork": "Dentistic hospital N1",
-    //   "location": "Sergeli district st. Yangi hayot 12 ",
-    //   "availebleTime": "11:00-19:00",
-    //   "rating": "5",
-    //   "img": "https://source.unsplash.com/random"
-    // },
-    // {
-    //   "name": "Elbek  Meliboyev",
-    //   "typeDoctor": "Dentist",
-    //   "placeOfWork": "Dentistic hospital N1",
-    //   "location": "Sergeli district st. Yangi hayot 12 ",
-    //   "availebleTime": "11:00-19:00",
-    //   "rating": "5",
-    //   "img": "https://source.unsplash.com/random"
-    // },
-    // {
-    //   "name": "Sanjar Sadullayev",
-    //   "typeDoctor": "Dentist",
-    //   "placeOfWork": "Dentistic hospital N1",
-    //   "location": "Sergeli district st. Yangi hayot 12 ",
-    //   "availebleTime": "11:00-19:00",
-    //   "rating": "5",
-    //   "img": "https://source.unsplash.com/random"
-    // },
-    // {
-    //   "name": "Erkin Ibragimov",
-    //   "typeDoctor": "Dentist",
-    //   "placeOfWork": "Dentistic hospital N1",
-    //   "location": "Sergeli district st. Yangi hayot 12 ",
-    //   "availebleTime": "11:00-19:00",
-    //   "rating": "5",
-    //   "img": "https://source.unsplash.com/random"
-    // },
+    {
+      "name": "Mansur Isroilov",
+      "typeDoctor": "Dentist",
+      "placeOfWork": "Dentistic hospital N1",
+      "location": "Sergeli district st. Yangi hayot 12 ",
+      "availebleTime": "11:00-19:00",
+      "rating": "5",
+     
+    },
   ];
 }

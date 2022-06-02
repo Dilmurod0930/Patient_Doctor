@@ -10,6 +10,11 @@ class DoctorPage extends StatefulWidget {
 }
 
 class _DoctorPageState extends State<DoctorPage> {
+  @override
+  void initState() {
+    super.initState();
+  }
+
   final TextEditingController _controller = TextEditingController();
   @override
   Widget build(BuildContext context) {
@@ -69,25 +74,66 @@ class _DoctorPageState extends State<DoctorPage> {
               ],
             ),
             SizedBox(
-              height: MediaQuery.of(context).size.height * 0.7,
-              child: ListView.builder(
+              height: MediaQuery.of(context).size.height * 0.6,
+              child: ListView.builder( 
                 padding: const EdgeInsets.all(8),
                 itemCount: DoctorData.doctors.length,
                 itemBuilder: (BuildContext context, int index) {
-                  return ListTile(
-                    leading: CircleAvatar(
-                      radius: 33,
-                      backgroundImage: NetworkImage(
-                          "https://source.unsplash.com/random/$index"),
+                  return Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Card(
+                      child: ListTile( 
+                        leading: CircleAvatar(
+                          radius: 33,
+                          backgroundImage: NetworkImage(
+                              "https://source.unsplash.com/random/$index"),
+                        ),
+                        title: Text("${DoctorData.doctors[index]["name"]}"),
+                        subtitle:
+                            Text('${DoctorData.doctors[index]["typeDoctor"]}'),
+                        trailing: const Icon(Icons.arrow_forward_ios),
+                        onTap: () {
+                          Navigator.pushNamedAndRemoveUntil(
+                              context, "/muolaja", (route) => false);
+                          DoctorData.doctors[index];
+                        },
+                      ),
                     ),
-                    title: Text("${DoctorData.doctors[index].name}"),
-                    onTap: () {
-                      DoctorData.doctors[index];
-                    },
-                  ); 
+                  );
                 },
               ),
             ),
+            Divider(height: 4, color: ColorConst.red),
+            //  SizedBox(
+            //   height: MediaQuery.of(context).size.height * 0.6,
+            //   child: ListView.builder(
+            //     padding: const EdgeInsets.all(8),
+            //     itemCount: DoctorData.doctors.length,
+            //     itemBuilder: (BuildContext context, int index) {
+            //       return Padding(
+            //         padding: const EdgeInsets.all(8.0),
+            //         child: Card(
+            //           child: ListTile(
+            //             leading: CircleAvatar(
+            //               radius: 33,
+            //               backgroundImage: NetworkImage(
+            //                   "https://source.unsplash.com/random/$index"),
+            //             ),
+            //             title: Text("${DoctorData.doctors[index]["name"]}"),
+            //             subtitle:
+            //                 Text('${DoctorData.doctors[index]["typeDoctor"]}'),
+            //             trailing: const Icon(Icons.arrow_forward_ios),
+            //             onTap: () {
+            //               Navigator.pushNamedAndRemoveUntil(
+            //                   context, "/muolaja", (route) => false);
+            //               DoctorData.doctors[index];
+            //             },
+            //           ),
+            //         ),
+            //       );
+            //     },
+            //   ),
+            // ),
           ],
         ),
       ),
