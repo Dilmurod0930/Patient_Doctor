@@ -94,7 +94,7 @@ class _DoctorPageState extends State<DoctorPage> {
                         trailing: const Icon(Icons.arrow_forward_ios),
                         onTap: () {
                           Navigator.pushNamedAndRemoveUntil(
-                              context, "/muolaja", (route) => false);
+                              context, "/main", (route) => false);
                           DoctorData.doctors[index];
                         },
                       ),
