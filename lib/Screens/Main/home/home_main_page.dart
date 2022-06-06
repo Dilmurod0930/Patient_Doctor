@@ -20,9 +20,20 @@ class HomeMainpage extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                const CircleAvatar(
-                  child: Icon((Icons.person)),
-                  radius: 16,
+                CircleAvatar(
+                  backgroundColor: ColorConst.grey,
+                  child: Center(
+                    child: IconButton(
+                      icon: Icon(
+                        Icons.person,
+                        color: ColorConst.black,
+                      ),
+                      onPressed: () {
+                        Navigator.pushNamed(context, "/profil");
+                      },
+                    ),
+                  ),
+                  
                 ),
                 Image.asset('assets/images/apbar.png'),
                 IconButton(
@@ -45,7 +56,7 @@ class HomeMainpage extends StatelessWidget {
             ),
             medicationappoint(context, "No medications",
                 "They will appear here only when doctor adds them to your account "),
-                SizedBox(height: MediaQuery.of(context).size.height * 0.2),
+            SizedBox(height: MediaQuery.of(context).size.height * 0.2),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [

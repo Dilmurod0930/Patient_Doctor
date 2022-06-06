@@ -8,7 +8,14 @@ class SintUpPersonalID extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(centerTitle: true, title: const Text("Your personal ID")),
+      appBar: AppBar(
+        centerTitle: true,
+        backgroundColor: Colors.transparent,
+        title: Text(
+          "Your personal ID",
+          style: TextStyle(color: ColorConst.black),
+        ),
+      ),
       body: Container(
         child: Padding(
           padding: const EdgeInsets.all(15.0),
@@ -29,8 +36,8 @@ class SintUpPersonalID extends StatelessWidget {
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-               const   Text("Your ID"),
-                 Container(
+                  const Text("Your ID"),
+                  Container(
                     width: MediaQuery.of(context).size.width,
                     height: MediaQuery.of(context).size.height * 0.07,
                     decoration: BoxDecoration(
@@ -46,8 +53,9 @@ class SintUpPersonalID extends StatelessWidget {
                             alignment: Alignment.centerLeft,
                             height: MediaQuery.of(context).size.height * 0.07,
                             decoration: BoxDecoration(
-                              border: Border.all(color: ColorConst.black.withOpacity(0.2)),
-                              borderRadius:const BorderRadius.only(
+                              border: Border.all(
+                                  color: ColorConst.black.withOpacity(0.2)),
+                              borderRadius: const BorderRadius.only(
                                 topLeft: Radius.circular(10),
                                 bottomLeft: Radius.circular(10),
                               ),
@@ -57,7 +65,8 @@ class SintUpPersonalID extends StatelessWidget {
                               padding: const EdgeInsets.all(12.0),
                               child: Text(
                                 "25983365",
-                                style: TextStyle(fontSize: FontConst.mediumFont),
+                                style:
+                                    TextStyle(fontSize: FontConst.mediumFont),
                               ),
                             ),
                           ),
@@ -67,7 +76,8 @@ class SintUpPersonalID extends StatelessWidget {
                           child: Row(
                             children: [
                               Container(
-                                margin: const EdgeInsets.symmetric(horizontal: 10),
+                                margin:
+                                    const EdgeInsets.symmetric(horizontal: 10),
                                 child: Text(
                                   "copy",
                                   style: TextStyle(
@@ -82,7 +92,6 @@ class SintUpPersonalID extends StatelessWidget {
                       ],
                     ),
                   ),
-
                 ],
               ),
               Container(
@@ -101,7 +110,7 @@ class SintUpPersonalID extends StatelessWidget {
                     Navigator.pushNamedAndRemoveUntil(
                         context, "/main", (route) => false);
                   },
-                ),  
+                ),
               ),
             ],
           ),

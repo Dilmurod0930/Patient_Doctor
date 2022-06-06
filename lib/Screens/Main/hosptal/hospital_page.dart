@@ -26,18 +26,21 @@ class _HospitlPageState extends State<HospitlPage> {
             color: ColorConst.grey.withOpacity(0.5),
             borderRadius: BorderRadius.circular(92),
           ),
-          child: Icon(
-            Icons.person,
-            color: ColorConst.grey,
+          child: IconButton(
+            icon: Icon(
+              Icons.person,
+              color: ColorConst.grey,
+            ),
+            onPressed: () {
+              Navigator.pushNamed(context, "/profil");
+            },
           ),
         ),
         centerTitle: true,
         title: Image.asset('assets/images/apbar.png'),
         actions: [
           IconButton(
-            onPressed: () {
-              
-            },
+            onPressed: () {},
             icon: Image.asset('assets/images/icon.png'),
           ),
         ],

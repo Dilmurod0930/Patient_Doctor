@@ -26,17 +26,42 @@ class _MuolajaPageState extends State<MuolajaPage>
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(backgroundColor: ColorConst.white,elevation: 0,
-        leading: const CircleAvatar(radius: 7,backgroundColor: Colors.grey, child: Icon(Icons.person, color: Colors.black,), ),
+      appBar: AppBar(
+        backgroundColor: ColorConst.white,
+        elevation: 0,
+        leading: CircleAvatar(
+          radius: 7,
+          backgroundColor: Colors.grey,
+          child: IconButton(
+            icon: Icon(
+              Icons.person,
+              color: ColorConst.black,
+            ),
+            onPressed: () {
+              Navigator.pushNamed(context, "/profil");
+            },
+          ),
+        ),
         centerTitle: true,
         title: Image.asset('assets/images/apbar.png'),
-        actions: const [Icon(Icons.notifications, size: 32,color: Colors.grey,)],
+        actions: const [
+          Icon(
+            Icons.notifications,
+            size: 32,
+            color: Colors.grey,
+          )
+        ],
         bottom: TabBar(
-          controller: tabController,indicatorColor: ColorConst.grey,
+          controller: tabController,
+          indicatorColor: ColorConst.grey,
           tabs: const [
             Tab(icon: Text("Treatment", style: TextStyle(color: Colors.grey))),
-            Tab(icon: Text("Medical history",style: TextStyle(color: Colors.grey))),
-            Tab(icon: Text("Drug history",style: TextStyle(color: Colors.grey)))
+            Tab(
+                icon: Text("Medical history",
+                    style: TextStyle(color: Colors.grey))),
+            Tab(
+                icon:
+                    Text("Drug history", style: TextStyle(color: Colors.grey)))
           ],
         ),
       ),

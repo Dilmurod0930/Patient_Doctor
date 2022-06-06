@@ -9,13 +9,25 @@ class HomeAuthPage extends StatelessWidget {
     return Scaffold(
       body: Scaffold(
         appBar: AppBar(
+          backgroundColor: ColorConst.white,
           centerTitle: true,
-          title: const Text('HomrAuth Page'),
+          title: Text(
+            'HomrAuth Page',
+            style: TextStyle(color: ColorConst.black),
+          ),
+          elevation: 1,
         ),
         body: Column(
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: [
-           Row(children: [ SizedBox(width: 80,),Image.asset('assets/images/rasm.png')],),
+            Row(
+              children: [
+                SizedBox(
+                  width: 80,
+                ),
+                Image.asset('assets/images/rasm.png')
+              ],
+            ),
             Column(
               children: const [
                 SizedBox(

@@ -26,9 +26,14 @@ class _DoctorPageState extends State<DoctorPage> {
             color: ColorConst.grey.withOpacity(0.5),
             borderRadius: BorderRadius.circular(92),
           ),
-          child: Icon(
-            Icons.person,
-            color: ColorConst.grey,
+          child: IconButton(
+            icon: Icon(
+              Icons.person,
+              color: ColorConst.grey,
+            ),
+            onPressed: () {
+              Navigator.pushNamed(context, "/profil");
+            },
           ),
         ),
         centerTitle: true,
@@ -75,14 +80,14 @@ class _DoctorPageState extends State<DoctorPage> {
             ),
             SizedBox(
               height: MediaQuery.of(context).size.height * 0.6,
-              child: ListView.builder( 
+              child: ListView.builder(
                 padding: const EdgeInsets.all(8),
                 itemCount: DoctorData.doctors.length,
                 itemBuilder: (BuildContext context, int index) {
                   return Padding(
                     padding: const EdgeInsets.all(8.0),
                     child: Card(
-                      child: ListTile( 
+                      child: ListTile(
                         leading: CircleAvatar(
                           radius: 33,
                           backgroundImage: NetworkImage(
