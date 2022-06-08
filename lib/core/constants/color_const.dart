@@ -10,4 +10,6 @@ class ColorConst {
   static Color yellow = Colors.yellow;
   static Color red = Colors.red;
   static Color kPimaryColor = const Color(0xff4F8FC0);
+
+  static const Color darck60 = Color(0xFF393647);
 }
